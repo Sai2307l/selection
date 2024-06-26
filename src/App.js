@@ -9,7 +9,8 @@ import React from "react";
 
 export function App() {
   const baseURL = "http://localhost:3001/";
-
+  const [Color, setColor] = useState([true, true, true]);
+  const [Ram, setRam] = useState([true, true, true]);
   const [data, setData] = useState(
     [true, true, true],
     [true, true, true],
@@ -26,10 +27,7 @@ export function App() {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
-
-  const [Color, setColor] = useState([true, true, true]);
-  const [Ram, setRam] = useState([true, true, true]);
+  }, [Color, Ram]);
 
   function changeRAM(id) {
     setRam([data[id][0], data[id][1], data[id][2]]);

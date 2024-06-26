@@ -20,12 +20,12 @@ const prepareAndStartServer = () => {
   app.get("/", (req, res) => {
     res.send({
       data: [
-        [true, true, true],
+        [true, false, true],
         [true, false, true],
         [true, true, true],
       ],
     });
-    console.log("data sent");
+    console.log("data is sent");
   });
 
   app.listen(PORT, () => {
